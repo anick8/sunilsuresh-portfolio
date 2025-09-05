@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sunil favicon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D35400"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark background to match site theme -->
+  <rect width="512" height="512" rx="64" fill="#0f0d0b"/>
+  <!-- Stylized block "S" with rounded ends (Orbitron-like) -->
+  <path
+    d="M116 140 H340 c48 0 88 40 88 88 s-40 88 -88 88 H188 c-44 0 -80 36 -80 80 s36 88 88 88 H396"
+    fill="none"
+    stroke="url(#g)"
+    stroke-width="84"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    transform="translate(512 0) scale(-1 1) translate(256 244) scale(0.92) translate(-256 -256)"
+  />
+</svg>
+

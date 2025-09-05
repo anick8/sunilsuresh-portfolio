@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 15% 7%; /* Darker background #121212 */
+    --foreground: 0 0% 96%; /* Light Gray #F4F4F4 */
+
+    --card: 210 20% 10%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 96%; /* Light Gray #F4F4F4 */
+
+    --popover: 210 20% 10%;
+    --popover-foreground: 0 0% 96%; /* Light Gray #F4F4F4 */
+
+    --primary: 20 85% 44%; /* Orange #D35400 */
+    --primary-foreground: 0 0% 98%; /* White for contrast */
+
+    --secondary: 20 75% 40%; /* Darker orange variant */
+    --secondary-foreground: 0 0% 98%; /* White for contrast */
+
+    --muted: 210 15% 15%; /* Muted background */
+    --muted-foreground: 0 0% 70%; /* Muted text */
+
+    --accent: 20 90% 50%; /* Brighter orange accent */
+    --accent-foreground: 0 0% 98%; /* White for contrast */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%; /* White */
+
+    --border: 210 15% 20%; /* Subtle border */
+    --input: 210 15% 15%; /* Input background */
+    --ring: 20 85% 44%; /* Orange focus ring */
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 15% 7%; /* Dark background */
+    --sidebar-foreground: 0 0% 96%; /* Light Gray #F4F4F4 */
+    --sidebar-primary: 20 85% 44%; /* Orange #D35400 */
+    --sidebar-primary-foreground: 0 0% 98%; /* White */
+    --sidebar-accent: 210 15% 15%;
+    --sidebar-accent-foreground: 0 0% 96%; /* Light Gray #F4F4F4 */
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 20 85% 44%; /* Orange */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(210 20% 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(20 85% 44%); /* Orange */
+  border-radius: 6px;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+.wavy-line {
+  position: relative;
+}
+
+.wavy-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--secondary), var(--primary), var(--accent));
+  background-size: 200% 100%;
+  animation: wave 2s linear infinite;
+}
+
+.react-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* 3D Transform Styles */
+.perspective-container {
+  perspective: 1000px;
+  perspective-origin: center;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatRotate {
+  0% { transform: translateY(0) rotateY(0deg); }
+  50% { transform: translateY(-15px) rotateY(2deg); }
+  100% { transform: translateY(0) rotateY(0deg); }
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
