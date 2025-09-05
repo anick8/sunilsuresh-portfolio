@@ -299,7 +299,7 @@ const Index = () => {
               <video
                 controls
                 playsInline
-                className="absolute inset-0 z-10 w-full h-full object-contain bg-black"
+                className="absolute inset-0 z-20 w-full h-full object-contain bg-black mix-blend-normal filter-none"
               >
                 <source src="/videos/abcd.mp4" type="video/mp4" />
               </video>
