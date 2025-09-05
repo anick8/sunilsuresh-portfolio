@@ -53,6 +53,7 @@ const Footer = () => {
 
   const socialEvents = [
     "Weddings",
+    "Marathons",
     "Birthdays and Anniversaries",
     "Cultural Festivals",
     "Charity Events and Fundraisers",

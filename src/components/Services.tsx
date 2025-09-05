@@ -16,6 +16,7 @@ import {
   Handshake,
   GraduationCap,
   Church,
+  Flag,
 } from "lucide-react";
 
 // Professional Glow Pulse Background (updated to orange theme)
@@ -131,6 +132,11 @@ const socialServices = [
     name: "Religious Ceremonies & Gatherings",
     icon: <Church className="w-6 h-6 text-accent" />,
     description: "Respectful and uplifting hosting for sacred occasions.",
+  },
+  {
+    name: "Marathons",
+    icon: <Flag className="w-6 h-6 text-accent" />,
+    description: "High-energy hosting for runs and endurance events.",
   },
 ];
 
