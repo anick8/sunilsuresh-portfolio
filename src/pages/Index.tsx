@@ -292,14 +292,14 @@ const Index = () => {
         </motion.section>
 
         {/* Mobile-only Performance Video Section */}
-        <section id="performance" className="md:hidden py-12">
+        <section id="performance" className="relative z-50 md:hidden py-12">
           <div className="container mx-auto px-4">
             <h3 className="text-xl font-bold mb-4 font-display text-foreground">Watch Performance</h3>
-            <div className="relative overflow-hidden rounded-2xl border border-border/50 shadow-lg bg-transparent aspect-[9/16] isolate">
+            <div className="relative z-50 overflow-hidden rounded-2xl border border-border/50 bg-black aspect-[9/16] isolate mix-blend-normal filter-none backdrop-blur-none shadow-none">
               <video
                 controls
                 playsInline
-                className="absolute inset-0 z-20 w-full h-full object-contain bg-black mix-blend-normal filter-none"
+                className="absolute inset-0 z-50 w-full h-full object-contain bg-black mix-blend-normal filter-none"
               >
                 <source src="/videos/abcd.mp4" type="video/mp4" />
               </video>
