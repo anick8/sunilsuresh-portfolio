@@ -295,11 +295,11 @@ const Index = () => {
         <section id="performance" className="md:hidden py-12">
           <div className="container mx-auto px-4">
             <h3 className="text-xl font-bold mb-4 font-display text-foreground">Watch Performance</h3>
-            <div className="relative overflow-hidden rounded-2xl border border-border/50 shadow-lg bg-card">
+            <div className="relative overflow-hidden rounded-2xl border border-border/50 shadow-lg bg-card aspect-[9/16]">
               <video
                 controls
                 playsInline
-                className="w-full h-auto aspect-video object-cover"
+                className="absolute inset-0 w-full h-full object-contain bg-black"
               >
                 <source src="/videos/abcd.mp4" type="video/mp4" />
               </video>
