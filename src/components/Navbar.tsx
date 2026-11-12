@@ -47,7 +47,6 @@ const Navbar = () => {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
               className="text-2xl md:text-3xl font-display font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-105 transition-transform"
-              style={{ cursor: "url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L19.0211 17.5H0.978853L10 0Z' fill='%23D35400'/%3E%3C/svg%3E\") 10 10, auto" }}
             >
               {logoTexts[currentTextIndex]}
             </motion.span>
@@ -59,7 +58,6 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-foreground p-2 hover:bg-primary/10 rounded-full transition-colors"
           aria-label="Toggle Menu"
-          style={{ cursor: "url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L19.0211 17.5H0.978853L10 0Z' fill='%23D35400'/%3E%3C/svg%3E\") 10 10, auto" }}
         >
           {isMobileMenuOpen ? (
             // X icon SVG
